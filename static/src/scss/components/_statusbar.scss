@@ -6,16 +6,10 @@
 #statusbar {
   height: 26px;
   width: 100%;
-  border-bottom: 1px solid #aaa;
   overflow: hidden;
   position: relative;
-  background-color: #ccc;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#bbb));
-  background-image: -webkit-linear-gradient(top, #ddd, #bbb);
-  background-image: -moz-linear-gradient(top, #ddd, #bbb);
-  background-image: -ms-linear-gradient(top, #ddd, #bbb);
-  background-image: -o-linear-gradient(top, #ddd, #bbb);
-  background-image: linear-gradient(top, #ddd, #bbb);
+  border-bottom: 2px solid #cad1d6;
+  background-color: #e9eef2;
 }
 
 #statusbar #filter {
