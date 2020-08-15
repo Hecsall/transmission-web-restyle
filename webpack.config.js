@@ -1,14 +1,12 @@
-
 const { argv } = require('yargs');
 
 const mode = argv.mode || 'development';
 
 const configs = {
-    js: require('./webpack/webpack.config.scripts'),
+    // js: require('./webpack/webpack.config.scripts'),
     css: require('./webpack/webpack.config.scss'),
-    // img: require('./webpack/webpack.config.images'),
+    img: require('./webpack/webpack.config.images'),
 };
-
 
 module.exports = Object.keys(configs)
     .map((key) => {
