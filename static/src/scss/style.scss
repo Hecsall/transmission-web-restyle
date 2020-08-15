@@ -1,12 +1,30 @@
 
 // Colors
-$green: #49cf84;
-$blue: #318ee4;
+$green: #2ecf81;
+$green-light: #e0f8ed;
+$blue: #1a8be8;
+$blue-light: #e1f1ff;
 // Text
+$font-size: 13px;
 $primary-text: #5c6d7c;
-$secondary-text: #8d9cab;
+$primary-text-paused: #c3ccd3;
+$secondary-text: #8799a9;
+$secondary-text-paused: #cfd6dc;
 $primary-text-inverted: #374f63;
 $secondary-text-inverted: #55718a;
+// Progress Bar Complete
+$progress-complete-paused: #8f8f8f;
+$progress-complete-magnet: #e7ebee;
+$progress-complete-leeching: $green;
+$progress-complete-leeching-queued: #e7ebee;
+$progress-complete-seeding: $blue;
+$progress-complete-seeding-queued: #e7ebee;
+// Progress Bar Inomplete
+$progress-incomplete-paused: #f7f8f9;
+$progress-incomplete-magnet: #d47778;
+$progress-incomplete-leeching: $green-light;
+$progress-incomplete-leeching-queued: #f7f8f9;
+$progress-incomplete-seeding: $blue-light;
 
 @import "components/base";
 @import "components/dialogs";           // untouched
