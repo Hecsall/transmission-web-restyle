@@ -3,7 +3,7 @@
 Let's face it, transmission web ui is terrible, I mean, look at this...
 
 ![Transmission web ui](https://blog.flo.cx/mycontent/2011/02/Screenshot-from-2014-04-15-170242-1038x576.png)
-_It's 2020 and it still looks like that._
+_It's 2020 and it still looks like this._
 
 So what i'm _trying_ to do is to "restyle" it a little, just to make it easier to look without stabbing your eyes.
 
