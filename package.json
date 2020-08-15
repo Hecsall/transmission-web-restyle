@@ -1,0 +1,50 @@
+{
+  "name": "transmission-web-restyle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "develop": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "build-ui": "./node_modules/gulp/bin/gulp.js build --gulpfile ./static/src/vendor/semantic/gulpfile.js",
+    "watch": "node ./node_modules/gulp/bin/gulp.js watch --skipWatch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/Hecsall/transmission-web-restyle.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "autoprefixer": "^9.8.5",
+    "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.6.0",
+    "del": "^5.1.0",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "file-loader": "^6.0.0",
+    "filemanager-webpack-plugin": "^2.0.5",
+    "glob": "^7.1.6",
+    "image-webpack-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^9.0.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0",
+    "stylelint-webpack-plugin": "^2.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "yargs": "^15.4.1"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
