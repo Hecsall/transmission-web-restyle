@@ -1,0 +1,268 @@
+/****
+  *****
+  *****  MAIN WINDOW FOOTER
+  *****
+  ****/
+div.torrent_footer {
+  height: 22px;
+  border-top: 1px solid #555;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  background-color: #ccc;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#bbb));
+  background-image: -webkit-linear-gradient(top, #ddd, #bbb);
+  background-image: -moz-linear-gradient(top, #ddd, #bbb);
+  background-image: -ms-linear-gradient(top, #ddd, #bbb);
+  background-image: -o-linear-gradient(top, #ddd, #bbb);
+  background-image: linear-gradient(top, #ddd, #bbb);
+}
+
+div.torrent_footer > div {
+  float: left;
+  margin: 2px 4px;
+  width: 18px;
+  height: 12px;
+  padding: 2px 8px;
+  float: left;
+  border: 1px solid #888;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+div.torrent_footer #settings_menu {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ddd;
+  background-image: url("../img/settings.png");
+
+  /* fallback */
+  background-image: url("../img/settings.png"), -webkit-gradient(linear, left top, left bottom, from(white), to(#bbb));
+
+  /* Saf4+, Chrome */
+  background-image: url("../img/settings.png"), -webkit-linear-gradient(top, white, #bbb);
+
+  /* Chrome 10+, Saf5.1+ */
+  background-image: url("../img/settings.png"), -moz-linear-gradient(top, white, #bbb);
+
+  /* FF3.6+ */
+  background-image: url("../img/settings.png"), -ms-linear-gradient(top, white, #bbb);
+
+  /* IE10 */
+  background-image: url("../img/settings.png"), -o-linear-gradient(top, white, #bbb);
+
+  /* Opera 11.10+ */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.torrent_footer #settings_menu:active,
+div.torrent_footer #settings_menu.selected {
+  background-color: #e6e6ff;
+  background-image: url("../img/settings.png");
+
+  /* fallback */
+  background-image: url("../img/settings.png"), -webkit-gradient(linear, left top, left bottom, from(#cdcdff), to(white));
+
+  /* Saf4+, Chrome */
+  background-image: url("../img/settings.png"), -webkit-linear-gradient(top, #cdcdff, white);
+
+  /* Chrome 10+, Saf5.1+ */
+  background-image: url("../img/settings.png"), -moz-linear-gradient(top, #cdcdff, white);
+
+  /* FF3.6+ */
+  background-image: url("../img/settings.png"), -ms-linear-gradient(top, #cdcdff, white);
+
+  /* IE10 */
+  background-image: url("../img/settings.png"), -o-linear-gradient(top, #cdcdff, white);
+
+  /* Opera 11.10+ */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.torrent_footer #prefs-button {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ddd;
+  background-image: url("../img/wrench.png");
+
+  /* fallback */
+  background-image: url("../img/wrench.png"), -webkit-gradient(linear, left top, left bottom, from(white), to(#bbb));
+
+  /* Saf4+, Chrome */
+  background-image: url("../img/wrench.png"), -webkit-linear-gradient(top, white, #bbb);
+
+  /* Chrome 10+, Saf5.1+ */
+  background-image: url("../img/wrench.png"), -moz-linear-gradient(top, white, #bbb);
+
+  /* FF3.6+ */
+  background-image: url("../img/wrench.png"), -ms-linear-gradient(top, white, #bbb);
+
+  /* IE10 */
+  background-image: url("../img/wrench.png"), -o-linear-gradient(top, white, #bbb);
+
+  /* Opera 11.10+ */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.torrent_footer #prefs-button:active,
+div.torrent_footer #prefs-button.selected {
+  background-color: #e6e6ff;
+  background-image: url("../img/wrench.png");
+
+  /* fallback */
+  background-image: url("../img/wrench.png"), -webkit-gradient(linear, left top, left bottom, from(#cdcdff), to(white));
+
+  /* Saf4+, Chrome */
+  background-image: url("../img/wrench.png"), -webkit-linear-gradient(top, #cdcdff, white);
+
+  /* Chrome 10+, Saf5.1+ */
+  background-image: url("../img/wrench.png"), -moz-linear-gradient(top, #cdcdff, white);
+
+  /* FF3.6+ */
+  background-image: url("../img/wrench.png"), -ms-linear-gradient(top, #cdcdff, white);
+
+  /* IE10 */
+  background-image: url("../img/wrench.png"), -o-linear-gradient(top, #cdcdff, white);
+
+  /* Opera 11.10+ */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.torrent_footer #turtle-button {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ddd;
+  background-image: url("../img/turtle.png");
+
+  /* fallback */
+  background-image: url("../img/turtle.png"), -webkit-gradient(linear, left top, left bottom, from(white), to(#bbb));
+
+  /* Saf4+, Chrome */
+  background-image: url("../img/turtle.png"), -webkit-linear-gradient(top, white, #bbb);
+
+  /* Chrome 10+, Saf5.1+ */
+  background-image: url("../img/turtle.png"), -moz-linear-gradient(top, white, #bbb);
+
+  /* FF3.6+ */
+  background-image: url("../img/turtle.png"), -ms-linear-gradient(top, white, #bbb);
+
+  /* IE10 */
+  background-image: url("../img/turtle.png"), -o-linear-gradient(top, white, #bbb);
+
+  /* Opera 11.10+ */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.torrent_footer #turtle-button:active,
+div.torrent_footer #turtle-button.selected {
+  background-color: #e6e6ff;
+  background-image: url("../img/turtle.png");
+
+  /* fallback */
+  background-image: url("../img/turtle.png"), -webkit-gradient(linear, left top, left bottom, from(#cdcdff), to(white));
+
+  /* Saf4+, Chrome */
+  background-image: url("../img/turtle.png"), -webkit-linear-gradient(top, #cdcdff, white);
+
+  /* Chrome 10+, Saf5.1+ */
+  background-image: url("../img/turtle.png"), -moz-linear-gradient(top, #cdcdff, white);
+
+  /* FF3.6+ */
+  background-image: url("../img/turtle.png"), -ms-linear-gradient(top, #cdcdff, white);
+
+  /* IE10 */
+  background-image: url("../img/turtle.png"), -o-linear-gradient(top, #cdcdff, white);
+
+  /* Opera 11.10+ */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.torrent_footer #turtle-button:active,
+div.torrent_footer #turtle-button.selected {
+  background-color: #e6e6ff;
+  background-image: url("../img/blue-turtle.png");
+
+  /* fallback */
+  background-image: url("../img/blue-turtle.png"), -webkit-gradient(linear, left top, left bottom, from(#cdcdff), to(white));
+
+  /* Saf4+, Chrome */
+  background-image: url("../img/blue-turtle.png"), -webkit-linear-gradient(top, #cdcdff, white);
+
+  /* Chrome 10+, Saf5.1+ */
+  background-image: url("../img/blue-turtle.png"), -moz-linear-gradient(top, #cdcdff, white);
+
+  /* FF3.6+ */
+  background-image: url("../img/blue-turtle.png"), -ms-linear-gradient(top, #cdcdff, white);
+
+  /* IE10 */
+  background-image: url("../img/blue-turtle.png"), -o-linear-gradient(top, #cdcdff, white);
+
+  /* Opera 11.10+ */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.torrent_footer #compact-button {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-color: #ddd;
+  background-image: url("../img/compact.png");
+
+  /* fallback */
+  background-image: url("../img/compact.png"), -webkit-gradient(linear, left top, left bottom, from(white), to(#bbb));
+
+  /* Saf4+, Chrome */
+  background-image: url("../img/compact.png"), -webkit-linear-gradient(top, white, #bbb);
+
+  /* Chrome 10+, Saf5.1+ */
+  background-image: url("../img/compact.png"), -moz-linear-gradient(top, white, #bbb);
+
+  /* FF3.6+ */
+  background-image: url("../img/compact.png"), -ms-linear-gradient(top, white, #bbb);
+
+  /* IE10 */
+  background-image: url("../img/compact.png"), -o-linear-gradient(top, white, #bbb);
+
+  /* Opera 11.10+ */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.torrent_footer #compact-button:active,
+div.torrent_footer #compact-button.selected {
+  background-color: #e6e6ff;
+  background-image: url("../img/compact.png");
+
+  /* fallback */
+  background-image: url("../img/compact.png"), -webkit-gradient(linear, left top, left bottom, from(#cdcdff), to(white));
+
+  /* Saf4+, Chrome */
+  background-image: url("../img/compact.png"), -webkit-linear-gradient(top, #cdcdff, white);
+
+  /* Chrome 10+, Saf5.1+ */
+  background-image: url("../img/compact.png"), -moz-linear-gradient(top, #cdcdff, white);
+
+  /* FF3.6+ */
+  background-image: url("../img/compact.png"), -ms-linear-gradient(top, #cdcdff, white);
+
+  /* IE10 */
+  background-image: url("../img/compact.png"), -o-linear-gradient(top, #cdcdff, white);
+
+  /* Opera 11.10+ */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.torrent_footer #freespace-info {
+  float: right;
+  text-align: right;
+  border: 0px;
+  width: 100px;
+}

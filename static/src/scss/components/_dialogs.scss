@@ -1,0 +1,172 @@
+/***
+****
+****  ABOUT DIALOG
+****
+***/
+#about-dialog > * {
+  text-align: center;
+}
+
+#about-dialog > #about-logo {
+  background: transparent url("../img/logo.png") top left no-repeat;
+  width: 64px;
+  height: 64px;
+  margin-left: 100px;
+}
+
+#about-dialog > #about-title {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+/***
+****
+****  HOTKEYS DIALOG
+****
+***/
+#hotkeys-dialog table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#hotkeys-dialog table th,
+#hotkeys-dialog table td {
+  border: 1px solid #aaa;
+}
+
+
+/****
+  *****
+  *****  DIALOGS
+  *****
+  ****/
+div.dialog_container {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: black;
+  font-size: 1.1em;
+}
+
+div.dialog_container div.dialog_window {
+  background-color: #eee;
+  margin: 0 auto;
+  opacity: 0.95;
+  border-top: none;
+  text-align: left;
+  width: 420px;
+  z-index: 10;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.7);
+  top: 80px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  div.dialog_container div.dialog_window {
+    top: 0;
+    margin-top: 71px;
+  }
+}
+
+div.dialog_container .dialog_logo {
+  width: 64px;
+  height: 64px;
+  margin: 20px 20px 0 20px;
+  float: left;
+  background: transparent url("../img/logo.png") top left no-repeat;
+}
+
+div.dialog_container div.dialog_window h2.dialog_heading {
+  display: block;
+  float: left;
+  width: 305px;
+  font-size: 1.2em;
+  color: black;
+  margin-top: 20px;
+}
+
+div.dialog_container div.dialog_window div.dialog_message {
+  float: left;
+  padding-left: 3px;
+  margin-left: -3px;
+  width: 305px;
+  overflow: hidden;
+}
+
+div.dialog_container div.dialog_window a {
+  display: block;
+  float: right;
+  margin: 10px 20px 10px -8px;
+  padding: 5px;
+  background-color: #eee;
+  border: 1px solid #787878;
+  width: 50px;
+  height: 15px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #323232;
+  -webkit-appearance: button;
+  font: -webkit-control;
+  cursor: default;
+}
+
+div.dialog_container div.dialog_window a:hover,
+div.dialog_container div.dialog_window a:active {
+  background: #c0c8d6 url("../img/filter_bar.png") bottom repeat-x;
+}
+
+div#upload_container div.dialog_window div.dialog_message label {
+  margin-top: 15px;
+  display: block;
+}
+
+div#upload_container div.dialog_window div.dialog_message input {
+  width: 249px;
+  margin: 3px 0 0 0;
+  display: block;
+}
+
+div#upload_container div.dialog_window div.dialog_message input[type=text] {
+  width: 245px;
+  padding: 2px;
+}
+
+div#upload_container div.dialog_window div.dialog_message input[type=checkbox] {
+  margin: 15px 3px 0 0;
+  display: inline;
+  width: auto;
+}
+
+div#upload_container div.dialog_window div.dialog_message #auto_start_label {
+  display: inline;
+}
+
+div.dialog_container div.dialog_window form {
+  margin: 0;
+  padding: 0px;
+}
+
+div#move_container input#torrent_path {
+  width: 286px;
+  padding: 2px;
+}
+
+iframe#torrent_upload_frame {
+  display: block;
+
+  /* Don't change this : safari forms won't target hidden frames (they open a new window) */
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  width: 0px;
+  height: 0px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}

@@ -7,3 +7,13 @@ $primary-text: #5c6d7c;
 $secondary-text: #8d9cab;
 $primary-text-inverted: #374f63;
 $secondary-text-inverted: #55718a;
+
+@import "components/base";
+@import "components/dialogs";           // untouched
+@import "components/toolbar";           // untouched
+@import "components/statusbar";         // untouched
+@import "components/torrentList";       // <-- needs work
+@import "components/preferences";       // untouched
+@import "components/torrentInspector";  // untouched
+@import "components/popupMenu";         // untouched
+@import "components/footer";            // untouched

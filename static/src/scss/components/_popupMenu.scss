@@ -1,0 +1,15 @@
+/****
+  *****
+  *****  POPUP MENU
+  *****
+  ****/
+.ui-menu-item {
+  text-align: left;
+  white-space: nowrap;
+}
+
+#torrent_context_menu,
+#footer_super_menu {
+  font-size: 1em;
+  z-index: 3;
+}

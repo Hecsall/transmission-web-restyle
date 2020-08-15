@@ -1,0 +1,66 @@
+/***
+  ****
+  ****  PREFERENCES
+  ****
+  ***/
+#prefs-dialog.ui-tabs .ui-tabs-panel {
+  padding: 0px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.prefs-section {
+  margin: 10px;
+  text-align: left;
+}
+
+.prefs-section > * {
+  padding-top: 8px;
+  padding-left: 8px;
+}
+
+.prefs-section .title {
+  font-weight: bold;
+  font-size: larger;
+  padding-left: 0px;
+}
+
+.prefs-section .row .key {
+  float: left;
+  padding-top: 3px;
+}
+
+.prefs-section .row .key > * {
+  margin-left: 0px;
+}
+
+.prefs-section .row .value {
+  margin-left: 150px;
+}
+
+.prefs-section .row .value > * {
+  width: 100%;
+}
+
+.prefs-section .checkbox-row > input {
+  margin: 0px;
+}
+
+.prefs-section .checkbox-row > label {
+  margin-left: 5px;
+}
+
+.prefs-section #alternative-speed-limits-title {
+  padding-left: 18px;
+  background: transparent url("../img/blue-turtle.png") no-repeat;
+}
+
+.prefs-section #alternative-speed-limits-desc {
+  font-size: smaller;
+  padding-bottom: 4px;
+}
+
+.prefs-section #blocklist-info {
+  font-size: smaller;
+  margin-top: 3px;
+}
