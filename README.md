@@ -24,3 +24,16 @@ Keep in mind that this repo is an experiment I'm doing in my free time when I fe
 Here is a screenshot of the current progress:
 ![Current progress](https://i.imgur.com/ganYOpZ.png)
 At the moment, i'm working on the torrents list.
+
+
+## **TODO:**
+- Rewrite every Style in SCSS - :hammer: In Progress...
+- Restyle torrents list - :hammer: In Progress...
+- Restyle top menu
+- Restyle bottom menu
+- Minify CSS output
+- Understand how the JS part works
+- Remove jQuery UI
+- Try to handle content changes with Vue JS (if possible)
+- PWA?
+- Everything
