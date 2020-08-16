@@ -22,7 +22,7 @@ Keep in mind that this repo is an experiment I'm doing in my free time when I fe
 
 ## Current progress
 Here is a screenshot of the current progress:
-![Current progress](https://i.imgur.com/zho8yAw.png)
+![Current progress](https://i.imgur.com/Cs4j9De.png)
 
 
 ## **TODO:**
