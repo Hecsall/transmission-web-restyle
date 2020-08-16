@@ -27,8 +27,9 @@ Here is a screenshot of the current progress:
 
 ## **TODO:**
 - Rewrite every Style in SCSS - :hammer: In Progress...
-- Restyle torrents list - :heavy_check_mark: Pretty much done
-- Restyle top menu - :hammer: In Progress...
+- Restyle torrents list - :heavy_check_mark: Done
+- Restyle top menu - :heavy_check_mark: Done
+- Restyle filters menu - :hammer: In Progress...
 - Restyle bottom menu
 - Minify CSS output
 - Understand how the JS part works
