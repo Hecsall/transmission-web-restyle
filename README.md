@@ -17,20 +17,28 @@ For now, i'll stick with CSS-only customizations, without touching any JavaScrip
 
 
 ## **This is an experiment**
-Keep in mind that this repo is an experiment I'm doing in my free time when I feel bored, do not expect for it to be even far from perfect or ready in no time.
+Keep in mind that this repo is an experiment I'm doing in my free time when I feel bored, do not expect for it to be even far from perfect.
 
 
 ## Current progress
 Here is a screenshot of the current progress:
-![Current progress](https://i.imgur.com/Cs4j9De.png)
+![Current progress](https://i.imgur.com/zeL0UcQ.png)
 
 
 ## **TODO:**
+- Restyle:
+    - Convert Main layout to CSS Grid - :hammer: In Progress...
+    - Torrents list - :heavy_check_mark: Done
+    - Top menu (toolbar) - :heavy_check_mark: Done
+    - Filters menu (statusbar - to be moved later)
+    - Bottom menu (footer) - :heavy_check_mark: Done
+    - Bottom menu dialogs
+    - Torrent info dialog
+    - Add torrent dialog
+    - Settings dialog
+    - Preferences dialog
+
 - Rewrite every Style in SCSS - :hammer: In Progress...
-- Restyle torrents list - :heavy_check_mark: Done
-- Restyle top menu - :heavy_check_mark: Done
-- Restyle filters menu
-- Restyle bottom menu - :hammer: In Progress...
 - Minify CSS output
 - Understand how the JS part works
 - Update jQuery
