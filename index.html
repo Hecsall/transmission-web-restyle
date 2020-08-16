@@ -109,95 +109,7 @@
 			</div>
 		</div>
 
-		<div id="torrent_container">
-			<ul class="torrent_list" id="torrent_list"></ul>
-        </div>
-        
-        <div class="torrent_footer">
-			<div id="settings_menu" title="Settings Menu">
-                <span class="oi" data-glyph="cog" aria-hidden="true"></span>
-            </div>
-			<div id="prefs-button" title="Edit Preferences…">
-                <span class="oi" data-glyph="wrench" aria-hidden="true"></span>
-            </div>
-			<div id="turtle-button" title="Alternative Speed Limits">
-                <span class="oi" data-glyph="dial" aria-hidden="true"></span>
-            </div>
-			<div id="compact-button" title="Compact View">
-                <span class="oi" data-glyph="list" aria-hidden="true"></span>
-            </div>
-
-			<ul class="ui-helper-hidden" id="footer_super_menu">
-				<li id="about-button">About</li>
-				<li>---</li>
-				<li id="homepage">Transmission Homepage</li>
-				<li id="tipjar">Transmission Tip Jar</li>
-				<li>---</li>
-				<li id="statistics">Statistics</li>
-				<li id="hotkeys">Hotkeys</li>
-				<!--
-				<li id="toggle_notifications">Notifcations</li>
-				-->
-				<li>---</li>
-				<li>Total Download Rate
-					<ul id="footer_download_rate_menu">
-						<li radio-group="download-rate" id="unlimited_download_rate"><span class='ui-icon ui-icon-bullet'></span>Unlimited</li>
-						<li radio-group="download-rate" id="limited_download_rate">Limit (10 kB/s)</li>
-						<li>---</li>
-						<li class='download-speed'>5 kB/s</li>
-						<li class='download-speed'>10 kB/s</li>
-						<li class='download-speed'>20 kB/s</li>
-						<li class='download-speed'>30 kB/s</li>
-						<li class='download-speed'>40 kB/s</li>
-						<li class='download-speed'>50 kB/s</li>
-						<li class='download-speed'>75 kB/s</li>
-						<li class='download-speed'>100 kB/s</li>
-						<li class='download-speed'>150 kB/s</li>
-						<li class='download-speed'>200 kB/s</li>
-						<li class='download-speed'>250 kB/s</li>
-						<li class='download-speed'>500 kB/s</li>
-						<li class='download-speed'>750 kB/s</li>
-					</ul>
-				</li>
-				<li>Total Upload Rate
-					<ul id="footer_upload_rate_menu">
-						<li radio-group="upload-rate" id="unlimited_upload_rate"><span class='ui-icon ui-icon-bullet'></span>Unlimited</li>
-						<li radio-group="upload-rate" id="limited_upload_rate">Limit (10 kB/s)</li>
-						<li>---</li>
-						<li class='upload-speed'>5 kB/s</li>
-						<li class='upload-speed'>10 kB/s</li>
-						<li class='upload-speed'>20 kB/s</li>
-						<li class='upload-speed'>30 kB/s</li>
-						<li class='upload-speed'>40 kB/s</li>
-						<li class='upload-speed'>50 kB/s</li>
-						<li class='upload-speed'>75 kB/s</li>
-						<li class='upload-speed'>100 kB/s</li>
-						<li class='upload-speed'>150 kB/s</li>
-						<li class='upload-speed'>200 kB/s</li>
-						<li class='upload-speed'>250 kB/s</li>
-						<li class='upload-speed'>500 kB/s</li>
-						<li class='upload-speed'>750 kB/s</li>
-					</ul>
-				</li>
-				<li>---</li>
-				<li>Sort Transfers By
-					<ul id="footer_sort_menu">
-						<li radio-group="sort-mode" id="sort_by_queue_order">Queue Order</li>
-						<li radio-group="sort-mode" id="sort_by_activity">Activity</li>
-						<li radio-group="sort-mode" id="sort_by_age">Age</li>
-						<li radio-group="sort-mode" id="sort_by_name">Name</li>
-						<li radio-group="sort-mode" id="sort_by_percent_completed">Progress</li>
-						<li radio-group="sort-mode" id="sort_by_ratio">Ratio</li>
-						<li radio-group="sort-mode" id="sort_by_size">Size</li>
-						<li radio-group="sort-mode" id="sort_by_state">State</li>
-						<li>---</li>
-						<li id="reverse_sort_order">Reverse Sort Order</li>
-					</ul>
-				</li>
-			</ul>
-        </div>
-        
-        <div class="ui-helper-hidden" id="prefs-dialog">
+		<div class="ui-helper-hidden" id="prefs-dialog">
 			<ul>
 				<li id="prefs-tab-general"><a href="#prefs-page-torrents">Torrents</a></li>
 				<li id="prefs-tab-speed"><a href="#prefs-page-speed">Speed</a></li>
@@ -356,6 +268,10 @@
 					</ul>
 			</div><!-- id="inspector_tab_files_container" -->
 
+		</div>
+
+		<div id="torrent_container">
+			<ul class="torrent_list" id="torrent_list"></ul>
 		</div>
 
 		<div class="dialog_container ui-helper-hidden" id="dialog_container">
