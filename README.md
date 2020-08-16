@@ -37,7 +37,6 @@ Here is a screenshot of the current progress:
     - Add torrent dialog
     - Settings dialog
     - Preferences dialog
-
 - Rewrite every Style in SCSS - :hammer: In Progress...
 - Minify CSS output
 - Understand how the JS part works
