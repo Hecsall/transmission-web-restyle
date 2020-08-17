@@ -64,7 +64,7 @@ div#sidebar {
       #speed-dn-label,
       #speed-up-label {
         vertical-align: middle;
-        font-size: 0.7em;
+        font-size: 0.6em;
         opacity: 0.6;
       }
     }
@@ -83,6 +83,37 @@ div#sidebar {
       vertical-align: middle;
       justify-self: start;
       margin-left: 8px;
+    }
+  }
+
+  #search-container {
+    margin-top: 25px;
+    position: relative;
+
+    #torrent_search {
+      width: 100%;
+      background-color: #162433;
+      color: $secondary-text-inverted;
+      font-size: 1.2em;
+      border: none;
+      padding: 10px 20px 10px 45px;
+      border-top: solid 2px #11202d;
+      border-bottom: solid 2px #11202d;
+
+      &::placeholder {
+        color: $secondary-text-inverted;
+        opacity: 0.5;
+        font-style: italic;
+      }
+    }
+
+    // Icon
+    span.oi {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: $secondary-text-inverted;
     }
   }
 }

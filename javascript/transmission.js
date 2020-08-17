@@ -160,11 +160,11 @@ Transmission.prototype = {
         });
         if (!$.browser.safari) {
             search_box.addClass('blur');
-            search_box[0].value = 'Filter';
+            // search_box[0].value = 'Filter';
             search_box.bind('blur', function () {
                 if (this.value === '') {
                     $(this).addClass('blur');
-                    this.value = 'Filter';
+                    // this.value = 'Filter';
                     tr.setFilterText(null);
                 };
             }).bind('focus', function () {
