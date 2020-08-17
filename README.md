@@ -22,7 +22,7 @@ Keep in mind that this repo is an experiment I'm doing in my free time when I fe
 
 ## Current progress
 Here is a screenshot of the current progress:
-![Current progress](https://i.imgur.com/zeL0UcQ.png)
+![Current progress](https://i.imgur.com/V4qyymK.png)
 
 
 ## **TODO:**
@@ -30,8 +30,8 @@ Here is a screenshot of the current progress:
     - Convert Main layout to CSS Grid - :hammer: In Progress...
     - Torrents list - :heavy_check_mark: Done
     - Top menu (toolbar) - :heavy_check_mark: Done
-    - Filters menu (statusbar - to be moved later)
-    - Bottom menu (footer) - :heavy_check_mark: Done
+    - Filters menu (statusbar - to be moved later) - :hammer: In Progress...
+    - Remove Bottom menu (footer) and move icons to sidebar - :heavy_check_mark: Done
     - Bottom menu dialogs
     - Torrent info dialog
     - Add torrent dialog

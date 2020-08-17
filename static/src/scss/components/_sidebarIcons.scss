@@ -1,22 +1,17 @@
 
-// Footer
-div.torrent_footer {
-  position: fixed;
-  bottom: 0;
+// Sidebar Icons
+div.sidebar-icons {
   height: auto;
-  border-top: $footer-border-top;
   width: 100%;
-  z-index: 3;
-  background-color: $footer-background-color;
-  color: $footer-icons-color;
-  padding: 3px 6px;
+  color: $sidebar-icons-color;
+  padding: 6px;
 
   & > div {
     display: inline-block;
     margin: 0 4px;
     width: 18px;
     // height: 12px;
-    padding: 2px 8px;
+    padding: 2px 2px;
     -moz-user-select: none;
     -webkit-user-select: none;
     cursor: pointer;
@@ -27,7 +22,7 @@ div.torrent_footer {
 
     &:active,
     &:hover {
-      background-color: darken($footer-background-color, 3%);
+      background-color: darken($sidebar-background-color, 3%);
     }
 
     &.selected {

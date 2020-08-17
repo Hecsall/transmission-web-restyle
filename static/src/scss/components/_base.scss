@@ -23,3 +23,22 @@ body {
     outline: 0;
   }
 }
+
+div#transmission-app {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "app-sidebar app-content";
+  grid-template-columns: 250px 1fr;
+
+  div#sidebar {
+    grid-area: app-sidebar;
+    height: 100%;
+    background-color: $sidebar-background-color;
+  }
+
+  div#app-content {
+    grid-area: app-content;
+    background-color: white;
+    height: 100%;
+  }
+}

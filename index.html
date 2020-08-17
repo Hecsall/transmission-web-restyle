@@ -41,161 +41,178 @@
 	</head>
 	<body id="transmission_body">
 
-		<div id="toolbar">
-		
-            <!-- Left aligned toolbar items -->
-			<div class="left-section">
-                <div id="toolbar-inspector" title="Toggle Inspector">
-                    <span class="oi" data-glyph="info" aria-hidden="true"></span>
-                </div>
-            </div>
+        <div id="transmission-app">
             
-            <!-- Right aligned toolbar items -->
-			<div class="right-section">
-                <div id="toolbar-start" title="Start Selected Torrents">
-                    <span class="oi" data-glyph="media-play" aria-hidden="true"></span>
+            <div id="sidebar">
+
+                <div class="sidebar-icons">
+                    <div id="settings_menu" title="Settings Menu">
+                        <span class="oi" data-glyph="cog" aria-hidden="true"></span>
+                    </div>
+                    <div id="prefs-button" title="Edit Preferences…">
+                        <span class="oi" data-glyph="wrench" aria-hidden="true"></span>
+                    </div>
+                    <div id="turtle-button" title="Alternative Speed Limits">
+                        <span class="oi" data-glyph="dial" aria-hidden="true"></span>
+                    </div>
+                    <div id="compact-button" title="Compact View">
+                        <span class="oi" data-glyph="list" aria-hidden="true"></span>
+                    </div>
+        
+                    <ul class="ui-helper-hidden" id="footer_super_menu">
+                        <li id="about-button">About</li>
+                        <li>---</li>
+                        <li id="homepage">Transmission Homepage</li>
+                        <li id="tipjar">Transmission Tip Jar</li>
+                        <li>---</li>
+                        <li id="statistics">Statistics</li>
+                        <li id="hotkeys">Hotkeys</li>
+                        <!--
+                        <li id="toggle_notifications">Notifcations</li>
+                        -->
+                        <li>---</li>
+                        <li>Total Download Rate
+                            <ul id="footer_download_rate_menu">
+                                <li radio-group="download-rate" id="unlimited_download_rate"><span class='ui-icon ui-icon-bullet'></span>Unlimited</li>
+                                <li radio-group="download-rate" id="limited_download_rate">Limit (10 kB/s)</li>
+                                <li>---</li>
+                                <li class='download-speed'>5 kB/s</li>
+                                <li class='download-speed'>10 kB/s</li>
+                                <li class='download-speed'>20 kB/s</li>
+                                <li class='download-speed'>30 kB/s</li>
+                                <li class='download-speed'>40 kB/s</li>
+                                <li class='download-speed'>50 kB/s</li>
+                                <li class='download-speed'>75 kB/s</li>
+                                <li class='download-speed'>100 kB/s</li>
+                                <li class='download-speed'>150 kB/s</li>
+                                <li class='download-speed'>200 kB/s</li>
+                                <li class='download-speed'>250 kB/s</li>
+                                <li class='download-speed'>500 kB/s</li>
+                                <li class='download-speed'>750 kB/s</li>
+                            </ul>
+                        </li>
+                        <li>Total Upload Rate
+                            <ul id="footer_upload_rate_menu">
+                                <li radio-group="upload-rate" id="unlimited_upload_rate"><span class='ui-icon ui-icon-bullet'></span>Unlimited</li>
+                                <li radio-group="upload-rate" id="limited_upload_rate">Limit (10 kB/s)</li>
+                                <li>---</li>
+                                <li class='upload-speed'>5 kB/s</li>
+                                <li class='upload-speed'>10 kB/s</li>
+                                <li class='upload-speed'>20 kB/s</li>
+                                <li class='upload-speed'>30 kB/s</li>
+                                <li class='upload-speed'>40 kB/s</li>
+                                <li class='upload-speed'>50 kB/s</li>
+                                <li class='upload-speed'>75 kB/s</li>
+                                <li class='upload-speed'>100 kB/s</li>
+                                <li class='upload-speed'>150 kB/s</li>
+                                <li class='upload-speed'>200 kB/s</li>
+                                <li class='upload-speed'>250 kB/s</li>
+                                <li class='upload-speed'>500 kB/s</li>
+                                <li class='upload-speed'>750 kB/s</li>
+                            </ul>
+                        </li>
+                        <li>---</li>
+                        <li>Sort Transfers By
+                            <ul id="footer_sort_menu">
+                                <li radio-group="sort-mode" id="sort_by_queue_order">Queue Order</li>
+                                <li radio-group="sort-mode" id="sort_by_activity">Activity</li>
+                                <li radio-group="sort-mode" id="sort_by_age">Age</li>
+                                <li radio-group="sort-mode" id="sort_by_name">Name</li>
+                                <li radio-group="sort-mode" id="sort_by_percent_completed">Progress</li>
+                                <li radio-group="sort-mode" id="sort_by_ratio">Ratio</li>
+                                <li radio-group="sort-mode" id="sort_by_size">Size</li>
+                                <li radio-group="sort-mode" id="sort_by_state">State</li>
+                                <li>---</li>
+                                <li id="reverse_sort_order">Reverse Sort Order</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                <div id="toolbar-pause" title="Pause Selected Torrents">
-                    <span class="oi" data-glyph="media-pause" aria-hidden="true"></span>
-                </div>
-                
-                <div class="toolbar-separator"></div>
-    
-                <div id="toolbar-start-all" title="Start All Torrents">
-                    <span class="oi" data-glyph="media-step-forward" aria-hidden="true"></span>
-                </div>
-                <div id="toolbar-pause-all" title="Pause All Torrents">
-                    <span class="oi" data-glyph="media-stop" aria-hidden="true"></span>
-                </div>
-                
-    
-                <div class="toolbar-separator"></div>
-    
-                <div id="toolbar-open" title="Open Torrent">
-                    <span class="oi" data-glyph="plus" aria-hidden="true"></span>
-                </div>
-                <div id="toolbar-remove" title="Remove Selected Torrents">
-                    <span class="oi" data-glyph="minus" aria-hidden="true"></span>
-                </div>
+
             </div>
+
+            <div id="app-content">
+
+                <div id="toolbar">
+                    <!-- Left aligned toolbar items -->
+                    <div class="left-section">
+                        <div id="toolbar-inspector" title="Toggle Inspector">
+                            <span class="oi" data-glyph="info" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Right aligned toolbar items -->
+                    <div class="right-section">
+                        <div id="toolbar-start" title="Start Selected Torrents">
+                            <span class="oi" data-glyph="media-play" aria-hidden="true"></span>
+                        </div>
+                        <div id="toolbar-pause" title="Pause Selected Torrents">
+                            <span class="oi" data-glyph="media-pause" aria-hidden="true"></span>
+                        </div>
+                        
+                        <div class="toolbar-separator"></div>
             
-		</div>
+                        <div id="toolbar-start-all" title="Start All Torrents">
+                            <span class="oi" data-glyph="media-step-forward" aria-hidden="true"></span>
+                        </div>
+                        <div id="toolbar-pause-all" title="Pause All Torrents">
+                            <span class="oi" data-glyph="media-stop" aria-hidden="true"></span>
+                        </div>
+                        
+            
+                        <div class="toolbar-separator"></div>
+            
+                        <div id="toolbar-open" title="Open Torrent">
+                            <span class="oi" data-glyph="plus" aria-hidden="true"></span>
+                        </div>
+                        <div id="toolbar-remove" title="Remove Selected Torrents">
+                            <span class="oi" data-glyph="minus" aria-hidden="true"></span>
+                        </div>
+                    </div>
+                    
+                </div>
 
-		<div id="statusbar">
-			<div id='filter'>
-				Show
-				<select id="filter-mode">
-					<option value="all">All</option>
-					<option value="active">Active</option>
-					<option value="downloading">Downloading</option>
-					<option value="seeding">Seeding</option>
-					<option value="paused">Paused</option>
-					<option value="finished">Finished</option>
-				</select>
-				<select id="filter-tracker"></select>
-				<input type="search" id="torrent_search" placeholder="Filter" />
-				<span id="filter-count">&nbsp;</span>
-			</div>
+                <div id="statusbar">
+                    <div id='filter'>
+                        Show
+                        <select id="filter-mode">
+                            <option value="all">All</option>
+                            <option value="active">Active</option>
+                            <option value="downloading">Downloading</option>
+                            <option value="seeding">Seeding</option>
+                            <option value="paused">Paused</option>
+                            <option value="finished">Finished</option>
+                        </select>
+                        <select id="filter-tracker"></select>
+                        <input type="search" id="torrent_search" placeholder="Filter" />
+                        <span id="filter-count">&nbsp;</span>
+                    </div>
+        
+                    <div id='speed-info'>
+                        <div id='speed-dn-container'>
+                            <div id='speed-dn-icon'></div>
+                            <div id='speed-dn-label'></div>
+                        </div>
+                        <div id='speed-up-container'>
+                            <div id='speed-up-icon'></div>
+                            <div id='speed-up-label'></div>
+                        </div>
+                    </div>
+                </div>
 
-			<div id='speed-info'>
-				<div id='speed-dn-container'>
-					<div id='speed-dn-icon'></div>
-					<div id='speed-dn-label'></div>
-				</div>
-				<div id='speed-up-container'>
-					<div id='speed-up-icon'></div>
-					<div id='speed-up-label'></div>
-				</div>
-			</div>
-		</div>
-
-		<div id="torrent_container">
-			<ul class="torrent_list" id="torrent_list"></ul>
-		</div>
-
-        <div class="torrent_footer">
-			<div id="settings_menu" title="Settings Menu">
-                <span class="oi" data-glyph="cog" aria-hidden="true"></span>
+                <div id="torrent_container">
+                    <ul class="torrent_list" id="torrent_list"></ul>
+                </div>
             </div>
-			<div id="prefs-button" title="Edit Preferences…">
-                <span class="oi" data-glyph="wrench" aria-hidden="true"></span>
-            </div>
-			<div id="turtle-button" title="Alternative Speed Limits">
-                <span class="oi" data-glyph="dial" aria-hidden="true"></span>
-            </div>
-			<div id="compact-button" title="Compact View">
-                <span class="oi" data-glyph="list" aria-hidden="true"></span>
-            </div>
-
-			<ul class="ui-helper-hidden" id="footer_super_menu">
-				<li id="about-button">About</li>
-				<li>---</li>
-				<li id="homepage">Transmission Homepage</li>
-				<li id="tipjar">Transmission Tip Jar</li>
-				<li>---</li>
-				<li id="statistics">Statistics</li>
-				<li id="hotkeys">Hotkeys</li>
-				<!--
-				<li id="toggle_notifications">Notifcations</li>
-				-->
-				<li>---</li>
-				<li>Total Download Rate
-					<ul id="footer_download_rate_menu">
-						<li radio-group="download-rate" id="unlimited_download_rate"><span class='ui-icon ui-icon-bullet'></span>Unlimited</li>
-						<li radio-group="download-rate" id="limited_download_rate">Limit (10 kB/s)</li>
-						<li>---</li>
-						<li class='download-speed'>5 kB/s</li>
-						<li class='download-speed'>10 kB/s</li>
-						<li class='download-speed'>20 kB/s</li>
-						<li class='download-speed'>30 kB/s</li>
-						<li class='download-speed'>40 kB/s</li>
-						<li class='download-speed'>50 kB/s</li>
-						<li class='download-speed'>75 kB/s</li>
-						<li class='download-speed'>100 kB/s</li>
-						<li class='download-speed'>150 kB/s</li>
-						<li class='download-speed'>200 kB/s</li>
-						<li class='download-speed'>250 kB/s</li>
-						<li class='download-speed'>500 kB/s</li>
-						<li class='download-speed'>750 kB/s</li>
-					</ul>
-				</li>
-				<li>Total Upload Rate
-					<ul id="footer_upload_rate_menu">
-						<li radio-group="upload-rate" id="unlimited_upload_rate"><span class='ui-icon ui-icon-bullet'></span>Unlimited</li>
-						<li radio-group="upload-rate" id="limited_upload_rate">Limit (10 kB/s)</li>
-						<li>---</li>
-						<li class='upload-speed'>5 kB/s</li>
-						<li class='upload-speed'>10 kB/s</li>
-						<li class='upload-speed'>20 kB/s</li>
-						<li class='upload-speed'>30 kB/s</li>
-						<li class='upload-speed'>40 kB/s</li>
-						<li class='upload-speed'>50 kB/s</li>
-						<li class='upload-speed'>75 kB/s</li>
-						<li class='upload-speed'>100 kB/s</li>
-						<li class='upload-speed'>150 kB/s</li>
-						<li class='upload-speed'>200 kB/s</li>
-						<li class='upload-speed'>250 kB/s</li>
-						<li class='upload-speed'>500 kB/s</li>
-						<li class='upload-speed'>750 kB/s</li>
-					</ul>
-				</li>
-				<li>---</li>
-				<li>Sort Transfers By
-					<ul id="footer_sort_menu">
-						<li radio-group="sort-mode" id="sort_by_queue_order">Queue Order</li>
-						<li radio-group="sort-mode" id="sort_by_activity">Activity</li>
-						<li radio-group="sort-mode" id="sort_by_age">Age</li>
-						<li radio-group="sort-mode" id="sort_by_name">Name</li>
-						<li radio-group="sort-mode" id="sort_by_percent_completed">Progress</li>
-						<li radio-group="sort-mode" id="sort_by_ratio">Ratio</li>
-						<li radio-group="sort-mode" id="sort_by_size">Size</li>
-						<li radio-group="sort-mode" id="sort_by_state">State</li>
-						<li>---</li>
-						<li id="reverse_sort_order">Reverse Sort Order</li>
-					</ul>
-				</li>
-			</ul>
         </div>
+
+		
+
+		
+
+		
+
+        
         
         <div class="ui-helper-hidden" id="prefs-dialog">
 			<ul>

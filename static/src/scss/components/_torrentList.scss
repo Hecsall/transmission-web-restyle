@@ -3,8 +3,10 @@
 div#torrent_container {
   padding: 0px;
   margin: 0px;
-  overflow: auto;
+  //   overflow: auto;
   -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  height: 100%;
 }
 
 // Torrent List
@@ -13,6 +15,7 @@ ul.torrent_list {
   margin: 0;
   padding: 0;
   list-style-type: none;
+
 
   /**
     * Progressbar
@@ -31,7 +34,7 @@ ul.torrent_list {
 
   // Single Torrent Entry
   li.torrent {
-    padding: 10px 30px;
+    padding: 10px 15px;
     background-color: white;
     cursor: pointer;
     display: grid;

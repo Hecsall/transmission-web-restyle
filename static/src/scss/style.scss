@@ -4,6 +4,7 @@ $green: #2ecf81;
 $green-light: #e0f8ed;
 $blue: #1a8be8;
 $blue-light: #e1f1ff;
+$dark-grey-blue: #1d2939;
 // Text
 $font-size: 13px;
 $primary-text: #5c6d7c;
@@ -12,15 +13,15 @@ $secondary-text: #8799a9;
 $secondary-text-paused: #cfd6dc;
 $primary-text-inverted: #374f63;
 $secondary-text-inverted: #55718a;
+// Sidebar
+$sidebar-background-color: $dark-grey-blue;
 // Toolbar
 $toolbar-background-color: #e9eef2;
 $toolbar-border-bottom: 2px solid #cad1d6;
 $toolbar-icons-color: #8799a9;
 $toolbar-separator-color: #d8dee1;
 // Footer
-$footer-background-color: #e9eef2;
-$footer-border-top: 2px solid #cad1d6;
-$footer-icons-color: #8799a9;
+$sidebar-icons-color: #516781;
 // Progress Bar Complete
 $progress-complete-paused: #8f8f8f;
 $progress-complete-magnet: #e7ebee;
@@ -37,10 +38,10 @@ $progress-incomplete-seeding: $blue-light;
 
 @import "components/base";
 @import "components/dialogs";           // untouched
-@import "components/toolbar";           // untouched
+@import "components/toolbar";
 @import "components/statusbar";         // untouched
 @import "components/torrentList";       // <-- needs check on some colors
 @import "components/preferences";       // untouched
 @import "components/torrentInspector";  // untouched
 @import "components/popupMenu";         // untouched
-@import "components/footer";            // untouched
+@import "components/sidebarIcons";
