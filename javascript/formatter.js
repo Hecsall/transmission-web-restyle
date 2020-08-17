@@ -145,6 +145,31 @@ Transmission.fmt = (function () {
             return [speed.toTruncFixed(2), speed_G_str].join(' ');
         },
 
+        speedBpsSplitted: function (Bps) {
+            return this.speedSplitted(this.toKBps(Bps));
+        },
+
+        speedSplitted: function (KBps) {
+            var speed = KBps;
+
+            if (speed <= 999.95) { // 0 KBps to 999 K
+                return [speed.toTruncFixed(0), speed_K_str];
+            }
+
+            speed /= speed_K;
+
+            if (speed <= 99.995) { // 1 M to 99.99 M
+                return [speed.toTruncFixed(2), speed_M_str];
+            }
+            if (speed <= 999.95) { // 100 M to 999.9 M
+                return [speed.toTruncFixed(1), speed_M_str];
+            }
+
+            // insane speeds
+            speed /= speed_K;
+            return [speed.toTruncFixed(2), speed_G_str];
+        },
+
         timeInterval: function (seconds) {
             var days = Math.floor(seconds / 86400),
                 hours = Math.floor((seconds % 86400) / 3600),

@@ -1409,10 +1409,12 @@ Transmission.prototype = {
         }
 
         $('#speed-up-container').toggleClass('active', u > 0);
-        $('#speed-up-label').text(fmt.speedBps(u));
+        $('#speed-up-number').text(fmt.speedBpsSplitted(u)[0]);
+        $('#speed-up-label').text(fmt.speedBpsSplitted(u)[1]);
 
         $('#speed-dn-container').toggleClass('active', d > 0);
-        $('#speed-dn-label').text(fmt.speedBps(d));
+        $('#speed-dn-number').text(fmt.speedBpsSplitted(d)[0]);
+        $('#speed-dn-label').text(fmt.speedBpsSplitted(d)[1]);
 
         // visible torrents
         $('#filter-count').text(fmt.countString('Transfer', 'Transfers', this._rows.length));

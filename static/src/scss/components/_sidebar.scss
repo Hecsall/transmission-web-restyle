@@ -1,0 +1,88 @@
+
+// Sidebar Icons
+div#sidebar {
+  background-color: $sidebar-background-color;
+
+  div.sidebar-icons {
+    height: auto;
+    width: 100%;
+    color: $sidebar-icons-color;
+    padding: 6px;
+
+    & > div {
+      display: inline-block;
+      margin: 0 4px;
+      width: 18px;
+      // height: 12px;
+      padding: 2px 2px;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      cursor: pointer;
+      font-size: 1.1em;
+      text-align: center;
+      border-radius: 5px;
+      vertical-align: middle;
+
+      &:active,
+      &:hover {
+        background-color: darken($sidebar-background-color, 3%);
+      }
+
+      &.selected {
+        color: $blue;
+      }
+
+      span::before {
+        // Better icons vertical alignment
+        margin-top: 3px;
+      }
+    }
+  }
+
+  div#speed-info {
+    display: grid;
+    grid-template-areas: "download upload";
+    grid-template-columns: 1fr 1fr;
+    margin-top: 20px;
+
+    #speed-dn-container,
+    #speed-up-container {
+      font-size: 2em;
+
+      // Arrow icon
+      span.oi {
+        font-size: 0.6em;
+        opacity: 0.6;
+        vertical-align: middle;
+      }
+
+      #speed-dn-number,
+      #speed-up-number {
+        vertical-align: middle;
+      }
+
+      #speed-dn-label,
+      #speed-up-label {
+        vertical-align: middle;
+        font-size: 0.7em;
+        opacity: 0.6;
+      }
+    }
+
+    #speed-dn-container {
+      grid-area: download;
+      color: $green;
+      vertical-align: middle;
+      justify-self: end;
+      margin-right: 8px;
+    }
+
+    #speed-up-container {
+      grid-area: upload;
+      color: $blue;
+      vertical-align: middle;
+      justify-self: start;
+      margin-left: 8px;
+    }
+  }
+}

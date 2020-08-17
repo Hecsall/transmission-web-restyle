@@ -30,31 +30,3 @@
 #statusbar #filter #filter-count {
   margin-left: 8px;
 }
-
-#statusbar #speed-info {
-  float: right;
-  margin-top: 5px;
-  margin-right: 10px;
-}
-
-#statusbar #speed-info * {
-  display: inline-block;
-}
-
-#statusbar #speed-info #speed-up-icon {
-  margin-left: 8px;
-  width: 8px;
-  height: 8px;
-  background: url("../img/arrow-up.png") bottom no-repeat;
-}
-
-#statusbar #speed-info #speed-dn-icon {
-  width: 8px;
-  height: 8px;
-  background: url("../img/arrow-down.png") bottom no-repeat;
-}
-
-#statusbar #speed-info #speed-up-container,
-#statusbar #speed-info #speed-dn-container {
-  display: inline;
-}
