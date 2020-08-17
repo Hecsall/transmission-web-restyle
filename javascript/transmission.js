@@ -71,6 +71,18 @@ Transmission.prototype = {
 
         e = $('#filter-mode');
         e.val(this[Prefs._FilterMode]);
+        
+        // Customized filter mode logic
+        let currentFilter = $('#filter-mode').val();
+        $('#filter-torrents li[data-value='+currentFilter+']').addClass('selected');
+        $('#filter-torrents').on('click', 'li', function(e){
+            $('#filter-torrents li').removeClass('selected');
+            $(this).addClass('selected');
+            $('#filter-mode').val($(this).data('value'));
+            // Manually trigger input change event
+            document.getElementById('filter-mode').dispatchEvent(new Event('change', { bubbles: true }))
+        });
+        
         e.change($.proxy(this.onFilterModeClicked, this));
         $('#filter-tracker').change($.proxy(this.onFilterTrackerClicked, this));
 

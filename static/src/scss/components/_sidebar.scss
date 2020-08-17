@@ -116,4 +116,39 @@ div#sidebar {
       color: $secondary-text-inverted;
     }
   }
+
+  #filter-torrents {
+    padding: 0 20px;
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1em;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        cursor: pointer;
+        color: $secondary-text-inverted;
+        padding: 5px;
+        font-size: 1.2em;
+        vertical-align: middle;
+
+        &.selected {
+          color: $blue;
+          font-weight: 500;
+        }
+
+        // Icon
+        span.oi {
+          margin-right: 10px;
+          font-size: 0.8em;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
 }
