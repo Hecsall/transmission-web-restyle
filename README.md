@@ -15,12 +15,20 @@ On top of that, it also uses JQuery UI, that I would like to replace with someth
 
 For now, i'll stick with CSS-only customizations, without touching any JavaScript. When i'm satisfied with the result (if i will ever be), i'll try to touch the JavaScript part to customize content and behaviours.
 
+## **Installation**
+The content of this repo is the content of the `web` folder of Transmission's Web UI. Just remove the files of the standard theme (backup them maybe), then place all the repo files in there.
+Common path to Transmission's web folder are:
+- Linux: `~/.local/share/transmission/web/`
+- macOS: `/Applications/Transmission.app/Contents/Resources/web/`
+- FreeNas (in jail): `/root/usr/local/share/transmission/web`
+
+Depending on the OS you are running, the path could be different.
 
 ## **This is an experiment**
 Keep in mind that this repo is an experiment I'm doing in my free time when I feel bored, do not expect for it to be even far from perfect.
 
 
-## Current progress
+## **Current progress**
 Here is a screenshot of the current progress:
 ![Current progress](https://i.imgur.com/JZpPvln.png)
 
