@@ -30,7 +30,7 @@ $.widget('tr.transMenu', $.ui.menu, {
 
 	open: function(event) {
 		this.element.show();
-		this.element.css({ position: "absolute", left: 4, top: -this.element.height() - 4 });
+		this.element.css({ position: "absolute", left: 4, top: 37 }); // top: -this.element.height() - 4
 
 		$(document).bind("keydown" + this.eventNamespace, $.proxy(function(event) {
 			if (event.which === $.ui.keyCode.ESCAPE)
