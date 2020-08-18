@@ -1,11 +1,13 @@
-ul.ui-contextmenu {
+
+ul.ui-contextmenu,
+ul.ui-menu {
   box-shadow: 0 10px 30px rgba(50, 50, 50, 0.2);
   z-index: 3;
   border-radius: 5px;
   border: none;
 
   li.ui-menu-item {
-    padding: 10px 10px;
+    padding: 6px 20px;
     white-space: nowrap;
     color: $secondary-text;
     font-size: 1em;
@@ -15,7 +17,7 @@ ul.ui-contextmenu {
       background-color: $blue;
       color: white;
       border: none;
-      padding: 10px 10px;
+      padding: 6px 20px;
       margin: 0;
     }
   }
