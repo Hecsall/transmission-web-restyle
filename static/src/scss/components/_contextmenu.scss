@@ -1,0 +1,28 @@
+ul.ui-contextmenu {
+  box-shadow: 0 10px 30px rgba(50, 50, 50, 0.2);
+  z-index: 3;
+  border-radius: 5px;
+  border: none;
+
+  li.ui-menu-item {
+    padding: 10px 10px;
+    white-space: nowrap;
+    color: $secondary-text;
+    font-size: 1em;
+
+    &.ui-state-focus {
+      background: none;
+      background-color: $blue;
+      color: white;
+      border: none;
+      padding: 10px 10px;
+      margin: 0;
+    }
+  }
+
+  li.ui-menu-divider {
+    padding: 0;
+    margin: 0;
+    border-color: $secondary-text-paused;
+  }
+}

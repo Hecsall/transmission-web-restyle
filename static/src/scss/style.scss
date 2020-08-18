@@ -42,5 +42,5 @@ $progress-incomplete-seeding: $blue-light;
 @import "components/torrentList";       // <-- needs check on some colors
 @import "components/preferences";       // untouched
 @import "components/torrentInspector";  // untouched
-@import "components/popupMenu";         // untouched
 @import "components/sidebar";
+@import "components/contextmenu";
