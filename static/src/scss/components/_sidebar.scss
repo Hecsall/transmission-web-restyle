@@ -11,10 +11,11 @@ div#sidebar {
     "icons"
     "speed"
     "search"
+    "count"
     "filterStatus"
     "filterTracker";
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto auto 1fr;
+  grid-template-rows: auto auto auto auto auto 1fr;
 
   div.sidebar-icons {
     grid-area: icons;
@@ -133,6 +134,27 @@ div#sidebar {
       left: 20px;
       top: 50%;
       transform: translateY(-50%);
+      color: $secondary-text-inverted;
+    }
+  }
+
+  #count-container {
+    grid-area: count;
+    margin-top: 15px;
+    padding: 0 20px;
+
+    h3 {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1em;
+      color: $primary-text-inverted;
+      letter-spacing: 0.03em;
+      margin: 0;
+      margin-bottom: 3px;
+    }
+
+    div {
+      font-size: 1.1em;
       color: $secondary-text-inverted;
     }
   }
