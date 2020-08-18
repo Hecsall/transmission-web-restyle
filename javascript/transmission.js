@@ -84,6 +84,15 @@ Transmission.prototype = {
         });
         
         e.change($.proxy(this.onFilterModeClicked, this));
+
+        // Customized filter tracker logic
+        $('#filter-trackers').on('click', 'li', function(e){
+            $('#filter-trackers li').removeClass('selected');
+            $(this).addClass('selected');
+            $('#filter-tracker').val($(this).data('value'));
+            // Manually trigger input change event
+            document.getElementById('filter-tracker').dispatchEvent(new Event('change', { bubbles: true }))
+        });
         $('#filter-tracker').change($.proxy(this.onFilterTrackerClicked, this));
 
         if (!isMobileDevice) {
@@ -1438,7 +1447,7 @@ Transmission.prototype = {
 
     updateFilterSelect: function () {
         var i, names, name, str, o;
-        var e = $('#filter-tracker');
+        // var e = $('#filter-tracker'); // useless
         var trackers = this.getTrackers();
 
         // build a sorted list of names
@@ -1448,24 +1457,25 @@ Transmission.prototype = {
         };
         names.sort();
 
+
         // build the new html
         if (!this.filterTracker) {
-            str = '<option value="all" selected="selected">All</option>';
+            str = '<li data-value="all" title="All" class="selected">All</li>';
         } else {
-            str = '<option value="all">All</option>';
+            str = '<li data-value="all" title="All">All</li>';
         };
         for (i = 0; name = names[i]; ++i) {
             o = trackers[name];
-            str += '<option value="' + o.domain + '"';
+            str += '<li data-value="' + o.domain + '"';
             if (trackers[name].domain === this.filterTracker) {
-                str += ' selected="selected"';
+                str += ' class="selected"';
             };
-            str += '>' + name + '</option>';
+            str += 'title="' + name + '">' + name + '</li>';
         }
 
         if (!this.filterTrackersStr || (this.filterTrackersStr !== str)) {
             this.filterTrackersStr = str;
-            $('#filter-tracker').html(str);
+            $('#filter-trackers ul').html(str);
         }
     },
 

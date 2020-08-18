@@ -2,8 +2,22 @@
 // Sidebar Icons
 div#sidebar {
   background-color: $sidebar-background-color;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  overflow: hidden;
+  display: grid;
+  grid-template-areas:
+    "icons"
+    "speed"
+    "search"
+    "filterStatus"
+    "filterTracker";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto 1fr;
 
   div.sidebar-icons {
+    grid-area: icons;
     height: auto;
     width: 100%;
     color: $sidebar-icons-color;
@@ -40,6 +54,7 @@ div#sidebar {
   }
 
   div#speed-info {
+    grid-area: speed;
     display: grid;
     grid-template-areas: "download upload";
     grid-template-columns: 1fr 1fr;
@@ -87,6 +102,7 @@ div#sidebar {
   }
 
   #search-container {
+    grid-area: search;
     margin-top: 25px;
     position: relative;
 
@@ -121,7 +137,21 @@ div#sidebar {
     }
   }
 
-  #filter-torrents {
+  #filter-torrents { grid-area: filterStatus; }
+
+  #filter-trackers {
+    grid-area: filterTracker;
+    overflow: hidden;
+
+    ul {
+      // 100% of #filter-trackers minus header height
+      // and minus some pixels of margin
+      height: calc(100% - 18px - 8px);
+    }
+  }
+
+  #filter-torrents,
+  #filter-trackers {
     padding: 0 20px;
     margin-top: 20px;
 
@@ -131,6 +161,7 @@ div#sidebar {
       font-size: 1em;
       color: $primary-text-inverted;
       letter-spacing: 0.03em;
+      margin: 0;
       margin-bottom: 3px;
     }
 
@@ -138,13 +169,17 @@ div#sidebar {
       list-style-type: none;
       padding: 0;
       margin: 0;
+      overflow: auto;
 
       li {
         cursor: pointer;
         color: $secondary-text-inverted;
-        padding: 5px;
-        font-size: 1.2em;
+        padding: 3px 5px;
+        font-size: 1.1em;
         vertical-align: middle;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
 
         &.selected {
           color: $blue;
