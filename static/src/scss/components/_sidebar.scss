@@ -100,6 +100,10 @@ div#sidebar {
       border-top: solid 2px #11202d;
       border-bottom: solid 2px #11202d;
 
+      &:focus {
+        outline: none;
+      }
+
       &::placeholder {
         color: $secondary-text-inverted;
         opacity: 0.5;
