@@ -35,6 +35,10 @@ $progress-incomplete-magnet: #d47778;
 $progress-incomplete-leeching: $green-light;
 $progress-incomplete-leeching-queued: #f7f8f9;
 $progress-incomplete-seeding: $blue-light;
+// Torrent Inspector
+$inspector-header-background-color: #303846;
+$inspector-tabs-background-color: #2a323f;
+$inspector-content-background-color: #28303b;
 
 @import "components/base";
 @import "components/dialogs";           // untouched

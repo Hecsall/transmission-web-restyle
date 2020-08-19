@@ -43,6 +43,7 @@ body {
   }
 }
 
+// Basic CSS Grid layout
 div#transmission-app {
   height: 100vh;
   display: grid;
@@ -59,4 +60,20 @@ div#transmission-app {
     background-color: white;
     height: 100%;
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #0e1419;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+// Utility classes
+.hide {
+  display: none;
 }

@@ -29,8 +29,9 @@ Keep in mind that this repo is an experiment I'm doing in my free time when I fe
 
 
 ## **Current progress**
-Here is a screenshot of the current progress:
-![Current progress](https://i.imgur.com/73vtzSa.png)
+Here are some screenshots of the current progress:
+![Main window](https://i.imgur.com/73vtzSa.png)
+![Torrent info](https://i.imgur.com/6OhVlqZ.png)
 
 
 ## **TODO:**

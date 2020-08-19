@@ -68,6 +68,7 @@ Transmission.prototype = {
         });
 
         $('#toolbar-inspector').click($.proxy(this.toggleInspector, this));
+        $('.overlay').click($.proxy(this.toggleInspector, this));
 
         e = $('#filter-mode');
         e.val(this[Prefs._FilterMode]);
@@ -1560,6 +1561,7 @@ Transmission.prototype = {
 
         // update the ui widgetry
         $('#torrent_inspector').toggle(visible);
+        $('.overlay').toggle(visible);
         $('#toolbar-inspector').toggleClass('selected', visible);
         this.hideMobileAddressbar();
         if (isMobileDevice) {
