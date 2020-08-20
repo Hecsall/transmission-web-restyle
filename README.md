@@ -6,10 +6,10 @@ I'm trying to recreate an interface as similar as possible to [Flood UI](https:/
 Current progress in the screenshots below (click to see fullsize):
 
 <img    src="https://i.imgur.com/73vtzSa.png" 
-        style="width: 400px; margin: 10px; cursor: pointer;" 
+        width="400" 
         title="Main screen">
 <img    src="https://i.imgur.com/6OhVlqZ.png" 
-        style="width: 400px; margin: 10px; cursor: pointer;" 
+        width="400" 
         title="Torrent info">
 
 > **Is this usable?**\
