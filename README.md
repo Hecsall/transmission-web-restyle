@@ -18,12 +18,8 @@ Current progress in the screenshots below (click to see fullsize):
 
 
 ## **The plan**
-Transmission's Web UI was made a long time ago, so it's full of old code, even a bunch of deprecated things here and there.\
-What i'm planning to do is to completely rewrite it, but i'll go slowly, first taking care of the CSS part without breaking anything, then i'll try to rewrite the JavaScript part.
-
-Note that:
-- I won't care about Internet Explorer compatibility;
-- For now I'm only developing the desktop view, the mobile view will be done in the future;
+Transmission's Web UI was made a long time ago, so it contains a lot of JavaScript that handles various things.\
+Rewriting it would be really time consuming so i will only take care of the CSS part without breaking anything, and i will touch as little JavaScript as possible.
 
 
 ## **Installation**
@@ -49,11 +45,8 @@ Depending on the OS you are running, the path could be different.
     - Settings dialog
     - Preferences dialog
 - Rewrite every Style in SCSS - :hammer: In Progress...
-- Minify CSS output
-- Understand how the JS part works
-- Update jQuery
-- Remove jQuery UI
-- Try to handle content changes with Vue JS (if possible)
-- PWA?
+- Remove jQuery UI (if possible)
+- ~~Vue JS?~~
+- ~~PWA?~~
 - Maybe pack everything in a `web` folder and put it on `/releases`
 - Everything
