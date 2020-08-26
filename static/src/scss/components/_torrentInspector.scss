@@ -216,62 +216,55 @@ div#torrent_inspector {
         }
       }
     }
+
+    #inspector_trackers_list {
+      ul.tier_list {
+        margin: 2px 0 8px 0;
+        width: 100%;
+        padding-left: 0px;
+        text-align: left;
+        display: block;
+        cursor: default;
+        list-style-type: none;
+        list-style: none;
+        list-style-image: none;
+        clear: both;
+
+        li {
+          overflow: hidden;
+        }
+
+        .tracker_activity {
+          float: left;
+          width: 330px;
+          display: table;
+          margin-top: 1px;
+
+          div {
+            padding: 2px;
+          }
+        }
+
+        table {
+          float: right;
+        }
+
+        th {
+          text-align: right;
+          font-weight: 500;
+        }
+      }
+    }
+
+    li.inspector_tracker_entry {
+      padding: 3px 0 3px 2px;
+      display: block;
+    }
+
+    div.tracker_host {
+      font-size: 1.2em;
+      font-weight: 500;
+      color: #b8c1cb;
+    }
   }
-}
-
-
-
-/* Peers Inspector Tab */
-
-div#torrent_inspector ul.tier_list {
-  margin: 2px 0 8px 0;
-  width: 100%;
-  padding-left: 0px;
-  text-align: left;
-  display: block;
-  cursor: default;
-  list-style-type: none;
-  list-style: none;
-  list-style-image: none;
-  clear: both;
-}
-
-div#torrent_inspector ul.tier_list li {
-  overflow: hidden;
-}
-
-div#torrent_inspector ul.tier_list .tracker_activity {
-  float: left;
-  color: #666;
-  width: 330px;
-  display: table;
-  margin-top: 1px;
-}
-
-div#torrent_inspector ul.tier_list .tracker_activity div {
-  padding: 2px;
-}
-
-div#torrent_inspector ul.tier_list table {
-  float: right;
-  color: #666;
-}
-
-div#torrent_inspector ul.tier_list th {
-  text-align: right;
-}
-
-div#torrent_inspector li.inspector_tracker_entry {
-  padding: 3px 0 3px 2px;
-  display: block;
-}
-
-div#torrent_inspector li.inspector_tracker_entry.odd {
-  background-color: #eee;
-}
-
-div#torrent_inspector div.tracker_host {
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #222;
 }
