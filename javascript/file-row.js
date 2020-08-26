@@ -137,6 +137,7 @@ function FileRow(torrent, depth, name, indices, even) {
         $(e).click(function () {
             firePriorityChanged(-1);
         });
+        e.innerHTML = '<span class="oi" data-glyph="chevron-bottom" aria-hidden="true"></span>';
         elements.priority_low_button = e;
         box.appendChild(e);
 
@@ -146,6 +147,7 @@ function FileRow(torrent, depth, name, indices, even) {
         $(e).click(function () {
             firePriorityChanged(0);
         });
+        e.innerHTML = '<span class="oi" data-glyph="minus" aria-hidden="true"></span>';
         elements.priority_normal_button = e;
         box.appendChild(e);
 
@@ -155,6 +157,7 @@ function FileRow(torrent, depth, name, indices, even) {
         $(e).click(function () {
             firePriorityChanged(1);
         });
+        e.innerHTML = '<span class="oi" data-glyph="chevron-top" aria-hidden="true"></span>';
         elements.priority_high_button = e;
         box.appendChild(e);
 

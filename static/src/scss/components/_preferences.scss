@@ -3,25 +3,26 @@
   ****  PREFERENCES
   ****
   ***/
-#prefs-dialog.ui-tabs .ui-tabs-panel {
-  padding: 0px;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-}
 
 .prefs-section {
   margin: 10px;
   text-align: left;
+
+  & > * {
+    padding-top: 8px;
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #b8c1cb;
+  }
 }
 
-.prefs-section > * {
-  padding-top: 8px;
-}
-
-.prefs-section .title {
-  font-weight: bold;
-  font-size: larger;
-  padding-left: 0px;
+#prefs-dialog.ui-tabs .ui-tabs-panel {
+  padding: 0px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .prefs-section .row .key {

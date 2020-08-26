@@ -72,8 +72,156 @@ div#torrent_inspector {
     grid-area: content;
     padding: 10px;
     background-color: $inspector-content-background-color;
+    overflow-y: scroll;
+
+    // Inspector pages
+
+    #inspector-page-files {
+      ul#inspector_file_list {
+        overflow: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 6px 0 0 0;
+        text-align: left;
+        display: block;
+        cursor: default;
+        list-style-type: none;
+        list-style: none;
+        list-style-image: none;
+        clear: both;
+
+        li {
+          display: grid;
+          align-items: center;
+          grid-template-areas:
+            'wanted filename priority'
+            'wanted progress priority';
+          grid-template-columns: 25px 1fr auto;
+
+          &.skip {
+            color: #666;
+          }
+
+          .file_wanted_control {
+            grid-area: wanted;
+            margin: 0;
+          }
+
+          .inspector_torrent_file_list_entry_name {
+            grid-area: filename;
+            color: $secondary-text-paused;
+            font-weight: 500;
+            font-size: 1.1em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-bottom: 3px;
+          }
+
+          .inspector_torrent_file_list_entry_progress {
+            grid-area: progress;
+          }
+
+          .file-priority-radiobox {
+            grid-area: priority;
+
+            & > * {
+              cursor: pointer;
+              -moz-user-select: none;
+              -webkit-user-select: none;
+              display: inline-block;
+              padding: 3px;
+              margin-left: 2px;
+              width: 20px;
+              height: 20px;
+              vertical-align: middle;
+              color: white;
+              border-radius: 3px;
+              text-align: center;
+
+              .oi::before {
+                margin-top: 3px;
+              }
+
+              &:active,
+              &.selected {
+                background-color: $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #inspector_peers_list {
+      padding: 0 0 0 0;
+      margin: 0 0 0 0;
+      text-align: left;
+      cursor: default;
+      overflow: hidden;
+
+      .inspector_group {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+
+      table.peer_list {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        cursor: default;
+        clear: both;
+        table-layout: fixed;
+
+        .inspector_peer_entry {
+          margin-bottom: 4px;
+        }
+
+        .encrypted-peer-cell,
+        .unencrypted-peer-cell {
+          width: 16px;
+        }
+
+        .encryptedCol {
+          width: 16px;
+        }
+
+        .upCol {
+          width: 70px;
+        }
+
+        .downCol {
+          width: 70px;
+        }
+
+        .percentCol {
+          width: 30px;
+          padding-right: 5px;
+          text-align: right;
+        }
+
+        .statusCol {
+          width: 40px;
+          padding-right: 5px;
+        }
+
+        .addressCol {
+          width: 180px;
+        }
+
+        .clientCol {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
   }
 }
+
+
+
+/* Peers Inspector Tab */
 
 div#torrent_inspector ul.tier_list {
   margin: 2px 0 8px 0;
@@ -126,306 +274,4 @@ div#torrent_inspector div.tracker_host {
   font-size: 1.2em;
   font-weight: bold;
   color: #222;
-}
-
-div#torrent_inspector #inspector_file_list {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
-  text-align: left;
-  cursor: default;
-  overflow: hidden;
-}
-
-div#torrent_inspector #inspector_file_list {
-  width: 100%;
-  margin: 6px 0 0 0;
-  padding-top: 6px;
-  padding-bottom: 10px;
-  text-align: left;
-  display: block;
-  cursor: default;
-  list-style-type: none;
-  list-style: none;
-  list-style-image: none;
-  clear: both;
-}
-
-div#torrent_inspector li.inspector_torrent_file_list_entry {
-  padding: 3px 0 3px 2px;
-  display: block;
-}
-
-div#torrent_inspector li.inspector_torrent_file_list_entry.skip {
-  color: #666;
-}
-
-div#torrent_inspector li.inspector_torrent_file_list_entry.even {
-  background-color: #f7f7f7;
-}
-
-div#torrent_inspector div.inspector_torrent_file_list_entry_name {
-  font-size: 1.2em;
-  color: black;
-  display: inline;
-  margin-left: 0px;
-}
-
-div#torrent_inspector li.inspector_torrent_file_list_entry.skip > .inspector_torrent_file_list_entry_name {
-  color: #999;
-}
-
-div#torrent_inspector div.inspector_torrent_file_list_entry_progress {
-  color: #999;
-  margin-left: 20px;
-}
-
-div#torrent_inspector ul.single_file li.inspector_torrent_file_list_entry > .file_wanted_control,
-div#torrent_inspector li.inspector_torrent_file_list_entry.complete > .file_wanted_control {
-  cursor: default;
-}
-
-/* Peers Inspector Tab */
-#inspector_peers_list {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
-  text-align: left;
-  cursor: default;
-  overflow: hidden;
-}
-
-#inspector_peers_list > div.inspector_group {
-  padding-bottom: 0;
-  margin-bottom: 0;
-}
-
-table.peer_list {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  cursor: default;
-  clear: both;
-  table-layout: fixed;
-}
-
-table.peer_list .encryptedCol {
-  width: 16px;
-}
-
-table.peer_list .upCol {
-  width: 70px;
-}
-
-table.peer_list .downCol {
-  width: 70px;
-}
-
-table.peer_list .percentCol {
-  width: 30px;
-  padding-right: 5px;
-  text-align: right;
-}
-
-table.peer_list .statusCol {
-  width: 40px;
-  padding-right: 5px;
-}
-
-table.peer_list .addressCol {
-  width: 180px;
-}
-
-table.peer_list .clientCol {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-tr.inspector_peer_entry div.encrypted-peer-cell {
-  width: 16px;
-  height: 16px;
-  background: transparent url("../img/lock_icon.png") no-repeat;
-}
-
-tr.inspector_peer_entry.odd {
-  background-color: #eee;
-}
-
-/***
-    ****  File Priority Buttons
-    ***/
-div.file-priority-radiobox {
-  display: inline;
-  float: right;
-  margin: 4px;
-  margin-top: 2px;
-}
-
-div.file-priority-radiobox > * {
-  cursor: pointer;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  display: inline-block;
-  border-style: solid;
-  border-color: #aaa;
-  border-width: 1px;
-  padding: 3px;
-  width: 20px;
-  height: 12px;
-}
-
-div.file-priority-radiobox > div.low {
-  -moz-border-radius-topleft: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  background-color: #ddd;
-  background-image: url("../img/file-priority-low.png");
-
-  /* fallback */
-  background-image: url("../img/file-priority-low.png"), -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#c9c9c9));
-
-  /* Saf4+, Chrome */
-  background-image: url("../img/file-priority-low.png"), -webkit-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* Chrome 10+, Saf5.1+ */
-  background-image: url("../img/file-priority-low.png"), -moz-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* FF3.6+ */
-  background-image: url("../img/file-priority-low.png"), -ms-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* IE10 */
-  background-image: url("../img/file-priority-low.png"), -o-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* Opera 11.10+ */
-  background-position: center;
-  background-repeat: no-repeat;
-  border-right-width: 0px;
-}
-
-div.file-priority-radiobox > div.low:active,
-div.file-priority-radiobox > div.low.selected {
-  background-color: #e6e6ff;
-  background-image: url("../img/file-priority-low.png");
-
-  /* fallback */
-  background-image: url("../img/file-priority-low.png"), -webkit-gradient(linear, left top, left bottom, from(#d7d7ff), to(#f5f5ff));
-
-  /* Saf4+, Chrome */
-  background-image: url("../img/file-priority-low.png"), -webkit-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* Chrome 10+, Saf5.1+ */
-  background-image: url("../img/file-priority-low.png"), -moz-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* FF3.6+ */
-  background-image: url("../img/file-priority-low.png"), -ms-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* IE10 */
-  background-image: url("../img/file-priority-low.png"), -o-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* Opera 11.10+ */
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-div.file-priority-radiobox > div.normal {
-  background-color: #ddd;
-  background-image: url("../img/file-priority-normal.png");
-
-  /* fallback */
-  background-image: url("../img/file-priority-normal.png"), -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#c9c9c9));
-
-  /* Saf4+, Chrome */
-  background-image: url("../img/file-priority-normal.png"), -webkit-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* Chrome 10+, Saf5.1+ */
-  background-image: url("../img/file-priority-normal.png"), -moz-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* FF3.6+ */
-  background-image: url("../img/file-priority-normal.png"), -ms-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* IE10 */
-  background-image: url("../img/file-priority-normal.png"), -o-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* Opera 11.10+ */
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-div.file-priority-radiobox > div.normal:active,
-div.file-priority-radiobox > div.normal.selected {
-  background-color: #e6e6ff;
-  background-image: url("../img/file-priority-normal.png");
-
-  /* fallback */
-  background-image: url("../img/file-priority-normal.png"), -webkit-gradient(linear, left top, left bottom, from(#d7d7ff), to(#f5f5ff));
-
-  /* Saf4+, Chrome */
-  background-image: url("../img/file-priority-normal.png"), -webkit-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* Chrome 10+, Saf5.1+ */
-  background-image: url("../img/file-priority-normal.png"), -moz-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* FF3.6+ */
-  background-image: url("../img/file-priority-normal.png"), -ms-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* IE10 */
-  background-image: url("../img/file-priority-normal.png"), -o-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* Opera 11.10+ */
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-div.file-priority-radiobox > div.high {
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  background-color: #ddd;
-  background-image: url("../img/file-priority-high.png");
-
-  /* fallback */
-  background-image: url("../img/file-priority-high.png"), -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#c9c9c9));
-
-  /* Saf4+, Chrome */
-  background-image: url("../img/file-priority-high.png"), -webkit-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* Chrome 10+, Saf5.1+ */
-  background-image: url("../img/file-priority-high.png"), -moz-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* FF3.6+ */
-  background-image: url("../img/file-priority-high.png"), -ms-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* IE10 */
-  background-image: url("../img/file-priority-high.png"), -o-linear-gradient(top, #f1f1f1, #c9c9c9);
-
-  /* Opera 11.10+ */
-  background-position: center;
-  background-repeat: no-repeat;
-  border-left-width: 0px;
-}
-
-div.file-priority-radiobox > div.high:active,
-div.file-priority-radiobox > div.high.selected {
-  background-color: #e6e6ff;
-  background-image: url("../img/file-priority-high.png");
-
-  /* fallback */
-  background-image: url("../img/file-priority-high.png"), -webkit-gradient(linear, left top, left bottom, from(#d7d7ff), to(#f5f5ff));
-
-  /* Saf4+, Chrome */
-  background-image: url("../img/file-priority-high.png"), -webkit-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* Chrome 10+, Saf5.1+ */
-  background-image: url("../img/file-priority-high.png"), -moz-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* FF3.6+ */
-  background-image: url("../img/file-priority-high.png"), -ms-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* IE10 */
-  background-image: url("../img/file-priority-high.png"), -o-linear-gradient(top, #d7d7ff, #f5f5ff);
-
-  /* Opera 11.10+ */
-  background-position: center;
-  background-repeat: no-repeat;
 }
