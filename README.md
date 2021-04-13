@@ -1,3 +1,10 @@
+
+> **Update April 2021!**\
+    The Official Flood UI has been updated, and now it supports rTorrent, **Transmission** and qBittorrent!\
+    You can find more information on the official website [flood.js.org](https://flood.js.org/) and on the [official repo on GitHub](https://github.com/jesec/flood).\
+    My repo will no longer updated, so i will archive it.
+
+    
 # **Transmission Web Restyle**
 
 This is an _attempt_ to refresh the look of Transmission's Web UI.\
